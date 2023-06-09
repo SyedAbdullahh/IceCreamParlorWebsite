@@ -1,0 +1,51 @@
+﻿@model IEnumerable<IceCreamProject.Models.Books>
+
+@{
+    ViewData["Title"] = "Buy Recipe Books";
+}
+
+<h1>Recipe Books</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Book Cover
+            </th>
+            <th>
+                Book Title
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Price in $
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="col-2 col-lg-2 col-md-2 col-xl-2">
+                <img class="col-12 col-md-12 col-xl-12 col-lg-12" src="@item.B_url">
+            </td>
+            <td class="col-2 col-md-2 col-lg-2 col-xl-2 font-weight-bold">
+                @Html.DisplayFor(modelItem => item.B_name)
+            </td>
+            <td class="col-4 col-md-4 col-lg-4 col-xl-4">
+                @Html.DisplayFor(modelItem => item.B_Desc)
+            </td>
+            <td class="col-2 col-md-2 col-lg-2 col-xl-2">
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+               
+                <a asp-action="Details" asp-route-id="@item.ID">Show Details</a>
+              
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

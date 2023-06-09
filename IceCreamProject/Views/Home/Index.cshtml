@@ -1,0 +1,24 @@
+﻿@{
+    @model IEnumerable<IceCreamProject.Models.Recipe>
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center bg-light">
+    <h1 class="display-4">Welcome</h1>
+    <div>
+        <h2>Want to Get Our Secret Ice Cream Recipes?</h2>
+        <p>Click Register Now to Get Premium Subscription to read our recipes </p>
+        <a class="btn btn-primary" asp-controller="Users" asp-action="Create"><p class="m-0">Register Now</p></a>
+    </div>
+   
+    
+    
+</div>
+<ul class="list-group col-4">
+    <h3>Those Who Contributed To Our Recipe Collection</h3>
+
+        @foreach (var item in Model) {
+  <li class="list-group-item">@item.Recipe_By</li>
+        }
+  
+</ul>

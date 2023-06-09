@@ -1,0 +1,35 @@
+﻿@model IEnumerable<IceCreamProject.Models.Recipe>
+
+@{
+    ViewData["Title"] = "Recipes";
+}
+
+<h1>Recipes</h1>
+
+
+
+        <div class="row justify-content-center">
+            @foreach (var item in Model) {
+
+    <div class="card col-5 col-md-5 col-lg-5 col-sm-5 col-xl-5 m-2">
+        <img src="@item.R_Url" class="card-img-top">
+        <div class="card-body">
+            <div class="d-inline-flex">
+            <h5 class="card-title">@item.R_Name</h5>
+            <p> Recipe By:@item.Recipe_By</p>
+            </div>
+            <p class="card-text"><b>Ingredients: </b>@item.Ingredients</p>
+            <a asp-action="Details" asp-route-id="@item.Recipe_ID" class="btn btn-primary">Details</a> 
+        </div>
+    </div>
+        
+                
+                
+                
+            
+}
+        </div>
+
+    
+
+
