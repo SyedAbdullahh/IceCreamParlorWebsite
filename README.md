@@ -110,6 +110,9 @@ Here are some Screenshots showcasing App's Interface:
 
 ![App Screenshot](https://imgtr.ee/images/2023/06/09/KRzoQ.png)
 
+### Reach Me Out At:
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/syed-abdullah-hassan-a17286215/)
+
 
 
 
